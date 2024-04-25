@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agam Interior's || Shop</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/image/favicon.jpeg') }}" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{{ url_for('static', filename='hide_show.js') }}"></script>
+  </head>
+  <body>
+    <div class="shopPageDiv">
+      <div class="HomeShop">
+        <a href="/" class="goBackBtn">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+          <p>home</p>
+        </a>
+      </div>
+      <div class="AboutShop" class="goFrontBtn">
+        <a href="/about" class="goFrontBtn">
+          <p>About</p>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <div class="AboutNav">
+      <nav class="topNav">
+        <ul>
+          <li>
+            <a href="#">Kitchen</a>
+          </li>
+          <li>
+            <a href="/404Page">Living Room</a>
+          </li>
+          <li>
+            <a href="/404Page">Dining Room</a>
+          </li>
+          <li>
+            <a href="/404Page">Bed Room</a>
+          </li>
+          <li>
+            <a href="/404Page">Kids Room</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="kitchen-shop">
+
+      <div class="kitchenProduct" id="kitchenProduct">
+        <div class="imageConfigure">
+          <img src="{{ url_for('static', filename='/image/product/kitchenProduct.jpeg') }}" alt="" />
+        </div>
+        <div class="kitchenProductInfo">
+          <h3>Kitchen</h3>
+          <p class="productDescription">In a quaint kitchen, amidst the comforting scent of freshly baked bread, a family gathers each evening. With love as their secret ingredient, they create culinary masterpieces that nourish both body and soul. Here, laughter flows freely, and memories simmer gently on the stove, creating a recipe for happiness that's passed down through generations. In this humble space, the true magic of family and food intertwine, turning ordinary moments into cherished treasures.</p>
+          <a onclick="showTheKitchenPayment()" style="cursor: pointer;">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="kitchenProductPaymentInfo" id="kitchenProductPaymentInfo" style="display: none;">
+        <div class="imageProductkitchen">
+          <img src="{{ url_for('static', filename='/image/product/kitchenProduct.jpeg') }}" alt="" />
+        </div>
+        <form action="/kitchen/payment" method="post">
+          <h1>Payment</h1>
+          <input type="text" name="username" id="Kitchenproduct" placeholder="Name" required />
+          <input type="text" name="kitchenProductDataset" id="kitchenproduct" placeholder="Kitchen" value="Kitchen Design" readonly />
+          <input type="number" name="kitchenProductContact" id="kitchenproduct" placeholder="Phone Number" required />
+          <input type="email" name="kitchenProductEmail" id="kitchenproduct" placeholder="Emain address" required />
+          <input type="text" name="kitchenProductLocation" id="Kitchenproduct" placeholder="Instalation Loaction" required />
+          <button type="submit" style="cursor: pointer;">Submit</button>
+        </form>
+      </div>
+
+      <a class="backToKitchenProductiInfo" id="backToButton" style="display: none;" onclick="showTheKitchenProduct()">
+        <ion-icon name="caret-back"></ion-icon>
+        <p>Back</p>
+      </a>
+    </div>
+  </body>
+</html>

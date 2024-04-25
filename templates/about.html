@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agam Interior's || About</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/image/favicon.jpeg') }}" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}" />
+  </head>
+  <body>
+    <div class="bodyStructure">
+        <div class="goToHome">
+            <a href="/" style="text-transform: uppercase;"><ion-icon name="chevron-back-outline"></ion-icon><p>home</p></a>
+        </div>
+        <div class="aboutShop">
+            <a href="/shop" target="_blank" style="text-transform: uppercase;"><p>shop</p><ion-icon name="chevron-forward-outline"></ion-icon></a>
+        </div>
+        <div class="imagesAbout" style="height: 420px; width: 320px;">
+            <img src="{{url_for('static', filename='/image/blogs/blogAgamE.jpeg')}}" alt="">
+        </div>
+        <div class="imagesAboutImageA" style="height: 420px; width: 320px;">
+            <img src="{{url_for('static', filename='/image/blogs/blogAgamF.jpeg')}}" alt="">
+        </div>
+        <div class="imagesAboutImageB">
+            <img src="{{url_for('static', filename='/image/about/AboutImage.jpeg')}}" alt="">
+        </div>
+    </div>
+    <div class="aboutContent">
+        <h1 class="aboutHeader">Agam Interior's</h1>
+        <div class="AboutAgamDescription">
+            <p class="aboutDescriptionA">
+                Welcome to Agam Interior's, your partner in creating exceptional interiors tailored to your lifestyle. From luxurious bedrooms to inviting living rooms and functional kitchens, we specialize in crafting spaces that reflect your unique taste and needs.
+            </p>
+            <p class="aboutDescriptionB">
+                For a limited time, we're excited to offer complimentary design services for your first project with us. Take advantage of this opportunity to experience our expertise firsthand and bring your vision to life.
+            </p>
+            <p class="aboutDescriptionC">With our lifetime service guarantee, rest assured that your satisfaction is our priority long after the project is complete. Contact us today to schedule your free consultation and embark on the journey to transform your home.</p>
+        </div>
+    </div>
+  </body>
+</html>

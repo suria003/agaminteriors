@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agam Interior's || Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/image/favicon.jpeg') }}" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="navigationbar" id="navbar">
+      <div class="navImage">
+        <img src="{{ url_for('static', filename='/image/logo.png') }}" alt="" />
+      </div>
+      <nav class="topNav">
+        <ul>
+          <li>
+            <a href="#">home</a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a href="#" class="dropbtn">products</a>
+              <div class="dropdown-content">
+                <a href="/shop" target="_blank">kitchen</a>
+                <a href="/shop" target="_blank">living room</a>
+                <a href="/shop" target="_blank">dining room</a>
+                <a href="/shop" target="_blank">bed room</a>
+                <a href="/shop" target="_blank">kid's room</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#service">service</a>
+          </li>
+          <li>
+            <a href="#blogs">blogs</a>
+          </li>
+          <li>
+            <a href="/about" target="_blank">about</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="contact-estimate">
+        <button class="btn Contact" onclick="simulateDatabaseOperation(); contactDataFetch();">Contact</button>
+        <button class="btn Estimate" onclick="simulateDatabaseOperation(); estimateDataFetch();">Estimate</button>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='/hide_show.js') }}"></script>
+    <script src="{{ url_for('static', filename='/nav.js') }}"></script>
+
+    <script>
+      function simulateDatabaseOperation() {
+        setTimeout(function () {}, 1000)
+      }
+    </script>
+
+    <div class="bodyAContent">
+      <div class="typingAnimation">
+        <h1 class="AgamTyped">Agam <span class="autoType"></span>.</h1>
+      </div>
+      <div class="descriptoinAgamA">
+        <p>Step into a world where contemporary elegance meets functional design with our company's stunning interiors. Our spaces are crafted to inspire creativity and foster productivity, with sleek lines and modern finishes that exude professionalism. From open-concept work areas to cozy breakout zones, every corner is meticulously planned to optimize comfort and efficiency. Neutral color palettes with pops of corporate branding create a cohesive and inviting atmosphere. High-quality materials and ergonomic furnishings ensure both style and comfort are seamlessly integrated. Natural light floods the space, enhancing productivity and well-being. Our interiors strike the perfect balance between form and function, providing a sophisticated backdrop for collaboration and innovation. Elevate your workspace experience and redefine your company culture with our exceptional interior design solutions.</p>
+      </div>
+      <a class="freeTrailsAgamA" href="/404Page">Free Trails</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="{{ url_for('static', filename='typing.js') }}"></script>
+
+    <div class="topTobottom">
+      <a id="scrollBtn" onclick="scrollToTop()"><ion-icon name="chevron-up-circle"></ion-icon></a>
+    </div>
+    <script src="{{ url_for('static', filename='/scrollTop.js') }}"></script>
+
+    <div class="whatApp-contact">
+      <a href="https://api.whatsapp.com/send?phone=+918838060247&text=Hi%20get%20your%20Free%20Trails."><img src="{{ url_for('static', filename='/image/whatsapp.png') }}" alt="" /></a>
+    </div>
+
+    <div class="contact-data" id="contact-data" style="display: none;">
+      <div class="closeBar">
+        <ion-icon name="close-outline" onclick="closeBarContactbtn()" id="closeBar-btn-contactData"></ion-icon>
+      </div>
+      <form action="/api/contactData" method="post">
+        <h2 style="text-decoration: underline;">Contact</h2>
+        <br />
+        <input type="text" name="userName" id="" placeholder="Name" />
+        <input type="number" name="userNumber" id="" placeholder="Phone Number" />
+        <input type="email" name="userEmail" id="" placeholder="E-mail Address" />
+        <button type="submit">contact</button>
+      </form>
+      <div class="FormIonIcon">
+        <ion-icon name="person"></ion-icon>
+        <ion-icon name="call"></ion-icon>
+        <ion-icon name="mail-unread"></ion-icon>
+      </div>
+    </div>
+
+    <div class="estimate-data contact-data" id="estimate-data" style="display: none;">
+      <div class="closeBar">
+        <ion-icon name="close-outline" onclick="closeBarEstimate()" id="closeBar-btn-estimateData"></ion-icon>
+      </div>
+      <form action="/api/estimateData" method="post">
+        <h2 style="text-decoration: underline;">Free Estimate Now!</h2>
+        <br />
+        <input type="text" name="userEstimateName" id="" placeholder="Name" />
+        <input type="number" name="userEstimateNumber" id="" placeholder="Phone Number" />
+        <input type="text" name="userEstimateLocation" id="" placeholder="Location" />
+        <button type="submit">Estimate Now!</button>
+      </form>
+      <div class="FormIonIcon" style="margin-top: -43%;">
+        <ion-icon name="person"></ion-icon>
+        <ion-icon name="call"></ion-icon>
+        <ion-icon name="location"></ion-icon>
+      </div>
+    </div>
+    <section class="scrollBarBodyA Home" style="height: 100vh; width: 100%;">
+      <div class="imageAnimation"></div>
+    </section>
+
+    <section id="service" class="BodyB">
+      <div class="serviceContent">
+        <h1>Get your estimate in 4 simple steps</h1>
+        <h4>It's that simple and convenient!</h4>
+      </div>
+      <div class="scrollBarBodyB">
+        <div class="servicestart serviceProcessTag">
+          <img src="{{ url_for('static', filename='/image/service/startService.png') }}" alt="" />
+        </div>
+        <div class="lineService"></div>
+        <div class="serviceProcess serviceProcessTag">
+          <img src="{{ url_for('static', filename='/image/service/serviceDesign.png') }}" alt="" />
+        </div>
+        <div class="lineService"></div>
+        <div class="serviceProcessStage serviceProcessTag">
+          <img src="{{ url_for('static', filename='/image/service/serviceAnalyst.png') }}" alt="" />
+        </div>
+        <div class="lineService"></div>
+        <div class="serviceEnd serviceProcessTag">
+          <img src="{{ url_for('static', filename='/image/service/EndService.png') }}" alt="" />
+        </div>
+      </div>
+      <div class="serviceProcessContent">
+        <div class="headSubHeading">
+          <h2>Choose your BHK type</h2>
+          <p>Located in a vibrant neighborhood, our 1-bedroom, 1-bath apartment offers a comfortable living space with modern amenities. Experience urban living at its finest in our cozy and inviting BHK residence, perfect for singles or couples seeking convenience and style.</p>
+        </div>
+        <div class="headSubHeading">
+          <h2>Select the size of your house</h2>
+          <p>Within my cozy house, nestled beneath whispering pines, laughter dances freely, painting vibrant tales.</p>
+        </div>
+        <div class="headSubHeading">
+          <h2>Pick the rooms to be designed</h2>
+          <p>Create a living room oasis with plush seating and ambient lighting, perfect for relaxation and entertainment.</p>
+        </div>
+        <div class="headSubHeading">
+          <h2>Pick a package as per your preference</h2>
+          <p>Choose the deluxe package for comprehensive amenities and personalized service, ensuring an unforgettable experience tailored to your preferences.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blogs" class="blogsReport" style="height: 100vh; width: 100%;">
+      <div class="blog">
+        <div class="imageBlog">
+          <img src="{{ url_for('static', filename='/image/blogs/blogAgamA.jpeg') }}" alt="" />
+        </div>
+        <a href="#">View Blog</a>
+      </div>
+      <div class="blog">
+        <div class="imageBlog">
+          <img src="{{ url_for('static', filename='/image/blogs/blogAgamE.jpeg') }}" alt="" />
+        </div>
+        <a href="#">View Blog</a>
+      </div>
+      <div class="blog">
+        <div class="imageBlog">
+          <img src="{{ url_for('static', filename='/image/blogs/blogAgamB.jpeg') }}" alt="" />
+        </div>
+        <a href="#">View Blog</a>
+      </div>
+    </section>
+    <script src="{{ url_for('static', filename='slide.js') }}"></script>
+
+    <footer class="footerbtn">
+      <div class="logoFooter" style="display: flex; flex-direction: row; gap: 10px; color: white; align-items: center;">
+        <p>Agam Interior's</p>
+        <p>||</p>
+        <p>Copyright</p>
+        <p>©</p>
+        <p>2024</p>
+      </div>
+      <div class="nav">
+        <nav class="topNav" style="display: flex;
+        flex-direction: row; align-items: center; gap: 10px;">
+          <ul class="footerNav">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+            <li>
+              <a href="#">Disclaimer</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms and Conditions</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,910 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+body {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  border: none;
+  padding: 0;
+  background: none;
+  z-index: 999;
+}
+
+.navigationbar {
+  height: 6rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 5px 0px 5px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
+.sticky {
+  background-color: transparent;
+  /* Change background color to transparent when fixed */
+}
+
+.navImage {
+  height: 100%;
+  width: 100%;
+  margin-left: 25px;
+}
+
+.navImage img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.topNav {
+  padding: 10px 20px;
+}
+
+.topNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.topNav ul li {
+  margin-right: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.topNav ul li a {
+  color: #4897f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.topNav ul li a:hover {
+  color: #1d3d76;
+}
+
+/* Additional Animation */
+.topNav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #1d3d76;
+  transition: width 0.3s ease;
+}
+
+.topNav ul li a:hover::after {
+  width: 100%;
+}
+
+/* drop down style */
+.dropbtn {
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background: transparent !important;
+}
+
+.dropdown-content {
+  margin-top: 0px;
+  margin-left: -25px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f98d;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+  color: #1d3d76;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.contact-estimate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  margin-right: 25px;
+}
+
+.contact-estimate button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #1d3d76;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn {
+  padding: 10px 20px;
+  color: #1d3d76;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.45s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+
+/* navbar style end */
+
+.contact-data {
+  border: 1px solid black;
+  height: 350px;
+  width: 35%;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  background-color: #4896f58e;
+}
+
+.contact-data form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  max-width: fit-content;
+  margin-top: 8%;
+  margin-left: 30%;
+}
+
+.FormIonIcon {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  max-width: fit-content;
+  margin-top: -38%;
+  margin-left: 20%;
+}
+
+.FormIonIcon ion-icon {
+  height: 40px;
+  width: 40px;
+  color: #1d3d76;
+}
+
+.contact-data input {
+  outline: 1.5px solid #1d3d76;
+  font-size: 18px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.contact-data button {
+  padding: 10px 10px;
+  font-size: 18px;
+  width: 42%;
+  background-color: #1d3d76;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.contact-data button:hover {
+  background: transparent;
+  outline: 1.5px solid #1d3d76;
+  color: #1d3d76;
+  transition: all .5s ease-in-out;
+}
+
+.closeBar {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4896f58e;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border-radius: 32px;
+}
+
+.closeBar ion-icon {
+  color: white;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.estimate-data {
+  border: 1px solid black;
+  height: 350px;
+  width: 35%;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  background-color: #4896f58e;
+}
+
+.closeBar ion-icon {
+  color: white;
+}
+
+/* Home Page design */
+.imageAnimation {
+  position: static;
+  height: 100vh;
+  width: 100%;
+  background: url(/static/image/homeImageSet/interiorDesignImageA.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: slidingImg 20s linear infinite;
+}
+
+@keyframes slidingImg {
+  0% {
+    background-image: url(./image//homeImageSet/interiorDesignImageA.png);
+  }
+
+  20% {
+    background-image: url(./image//homeImageSet/interiorDesignImageB.png);
+  }
+
+  25% {
+    background-image: url(./image//homeImageSet/interiorDesignImageB.png);
+  }
+
+  45% {
+    background-image: url(./image//homeImageSet/interiorDesignImageC.png);
+  }
+
+  50% {
+    background-image: url(./image//homeImageSet/interiorDesignImageC.png);
+  }
+
+  70% {
+    background-image: url(./image//homeImageSet/interiorDesignImageD.png);
+  }
+
+  75% {
+    background-image: url(./image//homeImageSet/interiorDesignImageD.png);
+  }
+
+  95% {
+    background-image: url(./image/homeImageSet/interiorDesignImageE.png);
+  }
+
+}
+
+.service {
+  height: 100vh;
+  width: 100%;
+}
+
+.blogs {
+  height: 100vh;
+  width: 100%;
+}
+
+.footerbtn {
+  height: 6em;
+  width: 100%;
+  background-color: black;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.topTobottom {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 8%;
+  right: 2%;
+  background-color: black;
+  z-index: 3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.topTobottom a ion-icon {
+  height: 45px;
+  width: 45px;
+  color: white;
+}
+
+.whatApp-contact {
+  position: fixed;
+  right: 2%;
+  top: 4%;
+  transform: translateY(-4%);
+  height: 60px;
+  width: 60px;
+}
+
+.whatApp-contact a img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.serviceProcessTag {
+  height: 100px;
+  width: 100px;
+  border-radius: 50% !important;
+  padding: 10px;
+}
+
+.serviceProcessTag:hover {
+  outline: 5px solid #1d3d76;
+  transition: all 0.8s ease-in;
+}
+
+.serviceProcessTag img:hover {
+  rotate: 40deg;
+  transition: all 1s ease-in;
+}
+
+.serviceProcessTag img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.scrollBarBodyB {
+  display: inline-flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 16%;
+  background: transparent;
+  margin-top: 20%;
+}
+
+.serviceProcessTag,
+.lineService {
+  position: relative;
+  top: -10px;
+}
+
+.lineService {
+  height: 5px;
+  background-color: #1d3d76;
+  width: 150px;
+}
+
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.serviceContent div {
+  height: 160px;
+  width: 20%;
+  margin: 0px 10px 0px 10px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.serviceTopContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  position: absolute;
+  top: 115%;
+  width: 100%;
+  background: transparent;
+}
+
+.BodyB {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(250, 235, 215, 0.492);
+}
+
+.serviceProcessContent {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  justify-content: center;
+  width: fit-content;
+  gap: 20px;
+  position: relative;
+  top: 5%;
+}
+
+.serviceProcessContent div {
+  height: 150px;
+  width: 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.serviceProcessContent div p {
+  text-align: justify;
+  font-size: 16px
+}
+
+.headSubHeading h2 {
+  text-decoration: underline;
+}
+
+.blogsReport {
+  background-color: rgba(250, 235, 215, 0.492);
+}
+
+.blogsReport {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  box-sizing: border-box;
+}
+
+.blogsReport .imageBlog {
+  height: 30em;
+  width: 80%;
+}
+
+.imageBlog img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.blog a {
+  padding: 10px 22px;
+  background-color: rgba(255, 255, 255, 0.836);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.532);
+  position: absolute;
+  top: 1875px;
+  margin-left: 70px;
+}
+
+.blog a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.49);
+  transition: all 1.5s ease-in-out;
+}
+
+.typingAnimation {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  font-size: 35px;
+  color: rgba(235, 235, 235, 0.956) !important;
+  text-shadow: 4px 5px 8px rgba(0, 0, 0, 0.455);
+  text-decoration: underline;
+}
+
+.descriptoinAgamA {
+  position: absolute;
+  top: 43%;
+  left: 7%;
+  background-color: transparent;
+  height: 380px;
+  width: 65%;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: justify;
+  color: rgba(26, 25, 25, 0.795);
+  background-color: rgba(255, 255, 255, 0.365);
+  border-radius: 12px;
+}
+
+.freeTrailsAgamA {
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  rotate: 270deg;
+  font-size: 40px;
+  padding: 20px 94px;
+  background-color: rgba(255, 255, 255, 0.365);
+  border-radius: 12px;
+  color: white;
+  text-shadow: 3px 7px 10px rgba(0, 0, 0, 0.455);
+}
+
+.freeTrailsAgamA {
+  text-decoration: none;
+}
+
+.freeTrailsAgamA:hover {
+  color: black;
+  transition: all 1s ease-in-out;
+}
+
+.bodyStructure {
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.goToHome {
+  position: fixed;
+  top: 5%;
+  left: 3%;
+  font-size: 22px;
+}
+
+.goToHome a ion-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.goToHome a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #1d3d76;
+  text-decoration: none;
+}
+
+.goToHome a:hover {
+  text-decoration: underline;
+  color: #4897f5;
+}
+
+.imagesAbout img {
+  margin-top: 190px;
+  margin-left: 100px;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.imagesAboutImageA img {
+  margin-top: -350px;
+  margin-left: 250px;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.imagesAboutImageB img {
+  height: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  position: relative;
+  top: -520px;
+  left: 280px;
+}
+
+.imagesAboutImageB {
+  height: 350px;
+  width: 350px;
+}
+
+.aboutShop {
+  position: fixed;
+  top: 5%;
+  right: 3%;
+  font-size: 22px;
+}
+
+.aboutShop a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #1d3d76;
+}
+
+.aboutShop a ion-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.aboutShop a:hover {
+  color: #4897f5;
+  text-decoration: underline;
+}
+
+.aboutContent {
+  background-color: transparent !important;
+  height: 34em;
+  width: 40em;
+  position: absolute;
+  top: 16%;
+  right: 7%;
+}
+
+.aboutContent h1 {
+  font-size: 70px;
+  color: white;
+  text-shadow: 4px 4px 4px black;
+  text-decoration: underline;
+}
+
+.AboutAgamDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.AboutAgamDescription p {
+  font-size: 22px;
+  text-align: justify;
+}
+
+.goBackBtn {
+  position: fixed;
+  top: 5%;
+  left: 3%;
+  font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #1d3d76;
+  text-transform: uppercase;
+}
+
+.goBackBtn ion-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.goBackBtn:hover {
+  color: #4897f5;
+  text-decoration: underline;
+}
+
+.goFrontBtn {
+  position: fixed;
+  top: 5%;
+  right: 3%;
+  font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #1d3d76;
+  text-transform: uppercase;
+}
+
+.goFrontBtn ion-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.goFrontBtn:hover {
+  color: #4897f5;
+  text-decoration: underline;
+}
+
+.AboutNav {
+  position: absolute;
+  top: 4.5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* kitchen Product design */
+
+.kitchen-shop {
+  background-color: transparent !important;
+  height: 30em;
+  width: 75%;
+  position: relative;
+  top: 120px;
+  left: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kitchenProduct {
+  display: flex;
+  height: 25em;
+  width: 65%;
+  outline: rgb(0, 0, 0) solid 2.5px;
+  border-radius: 12px;
+  box-shadow: 4px 4px black;
+  background-color: rgba(255, 255, 255, 0.464);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.imageConfigure {
+  height: 400px;
+  width: 400px;
+}
+
+.imageConfigure img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.kitchenProductInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+
+.kitchenProductInfo h3 {
+  font-size: 42px;
+  text-decoration: underline;
+}
+
+.kitchenProductInfo p {
+  width: 100%;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+.kitchenProductInfo a {
+  padding: 10px 20px;
+  background-color: #4897f5;
+  color: #1d3d76;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.kitchenProductInfo a:hover {
+  color: white;
+}
+
+/* kitchen product payment */
+.kitchenProductPaymentInfo {
+  display: none;
+  background-color: transparent !important;
+  height: 30em;
+  width: 75%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageProductkitchen {
+  height: 400px;
+  width: 400px;
+}
+
+.imageProductkitchen img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+.kitchenProductPaymentInfo form {
+  height: 100%;
+  width: 50%;
+  border: 4px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.kitchenProductPaymentInfo form input,
+button {
+  padding: 8px 22px;
+  font-size: 16px;
+  outline: none;
+  outline: 2px solid black;
+}
+
+.kitchenProductPaymentInfo form button {
+  color: black;
+  background-color: transparent !important;
+}
+
+/* back info */
+
+.backToKitchenProductiInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  position: absolute;
+  padding: 8px 16px;
+  top: 84%;
+  left: 64%;
+  cursor: pointer;
+  border-radius: 22px;
+}
+
+.backToKitchenProductiInfo:hover{
+  color: white;
+  background-color: black;
+}
+
+.errorPage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 132px;
+  position: absolute;
+  top: 30%;
+}

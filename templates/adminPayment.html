@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agam Interior's || Admin Product Payment data set</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/image/favicon.jpeg') }}" type="image/x-icon" />
+</head>
+<body>
+    <h1>Payment List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Product</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for payment in payments %}
+            <tr>
+                <td>{{ payment.name }}</td>
+                <td>{{ payment.product }}</td>
+                <td>{{ payment.number }}</td>
+                <td>{{ payment.email }}</td>
+                <td>{{ payment.location }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

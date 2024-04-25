@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agam Interior's || Admin estimate Data set</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/image/favicon.jpeg') }}" type="image/x-icon" />
+</head>
+<body>
+    <h1>Estimate Data set</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estimate in estimates %}
+            <tr>
+                <td>{{ estimate.name }}</td>
+                <td>{{ estimate.number }}</td>
+                <td>{{ estimate.location }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
